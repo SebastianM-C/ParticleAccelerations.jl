@@ -5,9 +5,10 @@ export total_acceleration, total_acceleration!,
     Pairwise, PairwiseSymmetric
 
 using .Threads
+using DiffEqBase
 
 include("api.jl")
-abstract type AbstractInteraction end
+include("diffeq.jl")
 
 function total_acceleration(system)
     dv = zero(atype(system))

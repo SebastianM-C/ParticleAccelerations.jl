@@ -6,23 +6,8 @@ export total_acceleration, total_acceleration!,
 
 using .Threads
 
-abstract type AbstractNBodySystem end
+include("api.jl")
 abstract type AbstractInteraction end
-abstract type AbstractSummationAlgorithm{T} end
-
-struct Pairwise{isparallel} <: AbstractSummationAlgorithm{isparallel} end
-struct PairwiseSymmetric{isparallel} <: AbstractSummationAlgorithm{isparallel} end
-struct PairList{isparallel} <: AbstractSummationAlgorithm{isparallel} end
-
-function number_of_particles(::AbstractNBodySystem, ::AbstractInteraction) end
-function interactions(::AbstractNBodySystem) end
-function pairlist(::AbstractNBodySystem, ::AbstractInteraction) end
-function atype(::AbstractNBodySystem) end
-function force!(dv, ::AbstractInteraction, ::AbstractNBodySystem) end
-function force!(dv, ::AbstractInteraction, ::AbstractNBodySystem, i, j) end
-function particle_mass(::AbstractNBodySystem, i) end
-function summation_alg(::AbstractInteraction) end
-function issparse(::AbstractInteraction) end
 
 function total_acceleration(system)
     dv = zero(atype(system))

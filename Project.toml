@@ -10,7 +10,9 @@ DiffEqBase = "2b5f629d-d688-5b77-993f-72d75c75574e"
 julia = "1"
 
 [extras]
+Molly = "aa0f7f06-fcc0-5ec4-a7f3-a573f33f9c4c"
+SafeTestsets = "1bc83da4-3b8d-516f-aca4-4fe02f6d838f"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Test"]
+test = ["Test", "SafeTestsets", "Molly"]

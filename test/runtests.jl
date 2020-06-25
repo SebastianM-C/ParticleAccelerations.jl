@@ -1,6 +1,8 @@
 using ParticleAccelerations
-using Test
+using Test, SafeTestsets
 
 @testset "ParticleAccelerations.jl" begin
-    # Write your tests here.
+    @safetestset "Molly integration tests" begin
+        include("molly.jl")
+    end
 end

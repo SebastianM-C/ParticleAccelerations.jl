@@ -32,10 +32,7 @@ s = Simulation(
     timestep=0.002, # ps
     n_steps=10_000
 )
-
-neigh = find_neighbours(s, nothing, s.neighbour_finder, 0, parallel=false)
-
-a = accelerations(s, neigh)
+a = accelerations(s)
 b = total_acceleration(s)
 
-@test a == b
+@test a ≈ b atol=1e-14

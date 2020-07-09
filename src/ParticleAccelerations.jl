@@ -11,7 +11,7 @@ include("api.jl")
 include("diffeq.jl")
 
 function total_acceleration(system)
-    dv = zero(atype(system))
+    dv = atype(system)
     total_acceleration!(dv, system)
     return dv
 end

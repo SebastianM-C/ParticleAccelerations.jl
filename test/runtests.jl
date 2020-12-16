@@ -1,7 +1,7 @@
-using ParticleAccelerations
+using NBodySummations
 using Test, SafeTestsets
 
-@testset "ParticleAccelerations.jl" begin
+@testset "NBodySummations.jl" begin
     @safetestset "Molly integration tests" begin
         include("molly.jl")
     end

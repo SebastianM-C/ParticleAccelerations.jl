@@ -1,4 +1,4 @@
-name = "ParticleAccelerations"
+name = "NBodySummations"
 uuid = "84564cac-4253-4969-9036-19db75b29133"
 authors = ["Sebastian Micluța-Câmpeanu <m.c.sebastian95@gmail.com> and contributors"]
 version = "0.1.0"

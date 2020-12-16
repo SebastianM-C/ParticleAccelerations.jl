@@ -1,4 +1,4 @@
-module ParticleAccelerations
+module NBodySummations
 
 export total_acceleration, total_acceleration!,
     AbstractNBodySystem, AbstractInteraction,
